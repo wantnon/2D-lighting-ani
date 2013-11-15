@@ -73,7 +73,7 @@ bool HelloWorld::init()
     light2D->setVisible(false);
     //sceneNode, sprite using 2D light
 	SceneNode*sceneNode=new SceneNode();
-	sceneNode->init("fish.png","fish_height.png");
+	sceneNode->init("actor_fish_shayu_normal_001.png","actor_fish_shayu_normal_001_h.png");
 	sceneNode->setPosition(ccp(winSize.width/2,winSize.height/2));
     sceneNode->setAnchorPoint(ccp(0.5,0.5));
     sceneNode->setDiffuseLight(light2D->diffuse);
@@ -475,6 +475,8 @@ void HelloWorld::resetSliders(CCObject *senderz, cocos2d::extension::CCControlEv
     pSliderList.push_back(m_pSliderCtl1a);
     pSliderList.push_back(m_pSliderCtl2a);
     pSliderList.push_back(m_pSliderCtl3a);
+    pSliderList.push_back(m_pSliderCtl);
+    pSliderList.push_back(m_pSliderCtlA);
     vector<float> initValueList;
     initValueList.push_back(m_initValue1);
     initValueList.push_back(m_initValue2);
@@ -482,6 +484,9 @@ void HelloWorld::resetSliders(CCObject *senderz, cocos2d::extension::CCControlEv
     initValueList.push_back(m_initValue1a);
     initValueList.push_back(m_initValue2a);
     initValueList.push_back(m_initValue3a);
+    initValueList.push_back(m_initValue);
+    initValueList.push_back(m_initValueA);
+    
     for(int i=0;i<(int)pSliderList.size();i++){
         pSliderList[i]->setValue(initValueList[i]);
     }
